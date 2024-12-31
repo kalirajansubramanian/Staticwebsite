@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .active {
+            margin-left: 50px;
+        }
+
+        li a:hover {
+            background-color: #ff0000;
+            color: white;
+        }
+
+        form {
+            float: right;
+            width: 100px;
+            padding: 5px 2px;
+        }
+
+        .kali {
+            position: absolute;
+            height: 30px;
+            top:12px;
+            right: 40px;
+            width: 200px;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100px;
+            height: 100px;
+        }
+
+        .bottom-left {
+            bottom: 240px;
+            color: orange;
+            position: absolute;
+            left: 240px;
+            font-weight: 700;
+        }
+
+        .bottom-left1 {
+            bottom: 130px;
+            color: white;
+            position: absolute;
+            left: 240px;
+            font-size: 40px;
+            font-weight: 1000;
+        }
+
+        .btn {
+            bottom: 70px;
+            position: absolute;
+            left: 230px;
+            font-size: 50px;
+            font-weight: 1000;
+        }
+
+        .b1 {
+            background-color: rgb(208, 156, 58);
+            height: 40px;
+            width: 150px;
+            font-size: 10px;
+            border-radius: 5px;
+            border-color: antiquewhite;
+            color: aliceblue;
+        }
+
+        p p2 {
+            top: 1000px;
+            position: absolute;
+            left: 240px;
+            font-size: 50px;
+            font-weight: 1000;
+            margin-left: 10px;
+            color: white;
+        }
+
+        h6 {
+            text-align: center;
+            font-size: 12px;
+            color: white;
+        }
+
+        span {
+            border: 5px black;
+            background-color: rgb(77, 77, 216);
+            width: 500px;
+            height: 50px;
+            top: 1040px;
+            position: absolute;
+            left: 0%;
+        }
+
+        .p1 {
+            text-align: center;
+            background-color: yellow;
+            left: 50%;
+        }
+
+        .sec {
+            background-color: white;
+            text-align: center;
+            margin-top: 300px;
+        }
+
+        .secbg {
+            position: inherit;
+            background-color: white;
+        }
+
+        h3 {
+            font-weight: 1000;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .row p {
+            font-size: 20px;
+            color: rgb(166, 150, 130);
+            padding-left: 35px;
+        }
+
+        .subh {
+            padding-left: 35px;
+            color: black;
+        }
+
+        .row a {
+            padding-left: 35px;
+        }
+
+        .img-fluid {
+            padding-left: 100px;
+            height: 700px;
+        }
+
+        .p3 {
+            font-weight: 700;
+            color: hsl(39, 95%, 48%);
+        }
+
+        .p4 {
+            color: black;
+        }
+
+        .hero {
+            background-color: aliceblue;
+        }
+
+        .btns {
+            display: inline-block;
+            margin-left: 35px;
+            background-color: aliceblue;
+        }
+
+        .btns :hover {
+            background-color: blue;
+            color: white;
+        }
+
+        .bt1 {
+            margin-top: 20px;
+            border: hsl(0, 0%, 100%);
+            block-size: 40px;
+            width: 150px;
+            font-size: large;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .bt2 {
+            margin-top: 20px;
+            border: hsl(0, 0%, 100%);
+            block-size: 40px;
+            width: 150px;
+            margin-left: 55px;
+            font-size: large;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .bt3 {
+            border: hsl(0, 0%, 100%);
+            block-size: 40px;
+            width: 150px;
+            margin-left: 60px;
+            font-size: large;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .gp1 {
+            margin-top: 20px;
+            background-color: white;
+            margin-left: 35px;
+        }
+
+        .gp {
+            font-size: 100px;
+            padding: 10px;
+        }
+
+        .nums {
+            background-color: black;
+            height: 110px;
+            display: inline-block;
+        }
+
+        .n1 {
+            padding-left: 250px;
+            padding-top: 20px;
+            color: orange;
+        }
+
+        .n2 {
+            padding-left: 600px;
+            color: orange;
+            margin-top: -92px;
+        }
+        .n3 {
+            padding-left: 1028px;
+            color: orange;
+            margin-top: -92px;
+        }
+
+        .sty {
+            color: orange;
+        }
+        /* Other CSS remains the same */
+
+/* Testimonials section */
+.testimonials {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.testimonials h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.testimonial-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+}
+
+.testimonial-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.testimonial-item p {
+    margin: 15px 0;
+}
+
+.testimonial-item h5 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+/* Blog section */
+.blog {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.blog h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.blog-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.blog-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+}
+
+.blog-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.blog-item h5 {
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+.blog-item .author {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.blog-item .author img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.done-projects img {
+    width: 100%;
+    height: auto;
+}
+.footer {
+    background: #343a40;
+    color: #fff;
+    padding: 2rem 0;
+}
+.footer a {
+    color: #ffc107;
+    text-decoration: none;
+}
+.footer a:hover {
+    color: #fff;
+}
+.footer .contact-info p {
+    margin-bottom: 0.5rem;
+}
+.pricing {
+    text-align: center;
+    padding: 50px 0;
+}
+.pricing .card {
+    border: none;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.pricing .card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+.pricing .card h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.pricing .card p {
+    font-size: 1em;
+    color: #666;
+}
+.pricing .btn {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+.pricing .btn:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+.project-image {
+    width: 100%;
+    height: 175px; 
+    object-fit: cover; 
+}
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <form>
+                    <input class="kali" type="text" placeholder="Search" bg-light>
+                </form>
+            </li>
+        </ul>
+    </div>
+    <div class="cls1">
+        <img class="img1" src="bg_2.webp">
+        <div class="bottom-left">WE CARE ABOUT YOUR CAR</div>
+        <div class="bottom-left1">It's Time to come to repair<br>your Car</div>
+        <div class="btn">
+            <button type="button" class="b1">BOOK AN APPOINTMENT</button>
+        </div>
+        <span>
+            <p class="p2"><h6>Are U Ready? Let's Repair now</h6></p>
+        </span>
+        </img>
+    </div>
+    <div class="secbg">
+        <div class="sec">
+            <h5>WE OFFER SERVICES</h5>
+            <h3>Our Car Services</h3>
+        </div>
+    </div>
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-md-4 p-5 text-white">
+                <div class="bg-white">
+                    <h3 class="subh">Oil change</h3>
+                    <p>Even the all-powered Pointing has no control about the blind texts it is an almost unorthographic</p>
+                    <a href="#" style="color: black">READ MORE</a>
+                </div>
+            </div>
+            <div class="col-md-4 p-5 text-white">
+                <div class="bg-white">
+                    <h3 class="subh">Batteries</h3>
+                    <p>Even the all-powered Pointing has no control about the blind texts it is an almost unorthographic</p>
+                    <a href="#" style="color: black">READ MORE</a>
+                </div>
+            </div>
+            <div class="col-md-4 p-5 text-white">
+                <div class="bg-white">
+                    <h3 class="subh">Tow Truck</h3>
+                    <p>Even the all-powered Pointing has no control about the blind texts it is an almost unorthographic</p>
+                    <a href="#" style="color: black">READ MORE</a>
+                </div>
+            </div>
+            <br>
+            <div class="col-md-4 p-5 text-white">
+                <div class="bg-white">
+                    <h3 class="subh">Tire change</h3>
+                    <p>Even the all-powered Pointing has no control about the blind texts it is an almost unorthographic</p>
+                    <a href="#" style="color: black">READ MORE</a>
+                </div>
+            </div>
+            <div class="col-md-4 p-5 text-white">
+                <div class="bg-white">
+                    <h3 class="subh">Engine Repair</h3>
+                    <p>Even the all-powered Pointing has no control about the blind texts it is an almost unorthographic</p>
+                    <a href="#" style="color: black">READ MORE</a>
+                </div>
+            </div>
+            <div class="col-md-4 p-5 text-white">
+                <div class="bg-white">
+                    <h3 class="subh">Car Maintenance</h3>
+                    <p>Even the all-powered Pointing has no control about the blind texts it is an almost unorthographic</p>
+                    <a href="#" style="color: black">READ MORE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="home" class="hero">
+        <div class="container-fluid mt-3">
+            <div class="row">
+                <div class="col-md-6 m-0 p-0">
+                    <img src="about.webp" class="img-fluid" alt="Responsive image">
+                </div>
+                <div class="col-md-6 p-5">
+                    <div class="home-text">
+                        <p class="p3" style="color: orange">WELCOME TO AUTOREPAIR</p>
+                        <p class="p4" style="color: black;"><strong>We help More Than 45 Years Serving Customer Car</strong></p>
+                        <p>Content marketing is nothing but offering users value. This is not just about traffic minion customers.Build and assemble machines or mechanical components according to requirements. Inspect machines, engines, transmissions etc. Conduct repairs aiming for maximum reliability. Troubleshoot reported problems and resolve them in a timely manner. Perform thorough maintenance on machinery, equipment and systems.</p>
+                    </div>
+                    <div class="btns">
+                        <button class="bt1" type="button">Our Mission</button>
+                        <button class="bt2" type="button">Our Vision</button>
+                        <button class="bt3" type="button">Our Value</button>
+                    </div>
+                    <div class="gp1">
+                        <p class="gp">Proven experience as Mechanic Excellent knowledge of machinery and hydraulic, electrical and other systems and their components Aptitude in using various hand tools (screwdrivers, hammers etc.) and precision measurement tools (e.g. calipers)</p>
+                    </div>
+                </div>
+                <div class="nums" style="display: inline-block;">
+                    <h1 class="n1"><strong>45</strong>
+                        <br></h1>
+                    <p class="sty" style="padding-left: 210px; font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 10px;">Years Of Experience</p>
+                    <h1 class="n2"><strong>8,500</strong>
+                        <br></h1>
+                    <p class="sty1" style="padding-left: 600px; font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 10px;">Project Completed</p>
+                    <h1 class="n3"><strong>30</strong>
+                      <br></h1>
+                    <p class="sty1" style="padding-left: 1000px; font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 10px;">Happy Customers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="testimonials">
+        <h3>Happy Clients & Feedbacks</h3>
+        <div class="testimonial-items">
+            <div class="testimonial-item">
+                <img src="person_2.webp" alt="Roger Scott">
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <h5>Roger Scott</h5>
+                <p>Marketing Manager</p>
+            </div>
+            <div class="testimonial-item">
+                <img src="person_1.webp" alt="Roger Scott">
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <h5>Roger Scott</h5>
+                <p>Marketing Manager</p>
+            </div>
+            <div class="testimonial-item">
+                <img src="person_2.webp" alt="Roger Scott">
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <h5>Roger Scott</h5>
+                <p>Marketing Manager</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog">
+        <h3>Latest News from our Blog</h3>
+        <div class="blog-items">
+            <div class="blog-item">
+                <img src="image_1.webp" alt="Best wheel alignment & air conditioning">
+                <h5>Best wheel alignment & air conditioning</h5>
+                <p class="author"><img src="person_2.webp" alt="John Doe"> Posted by John Doe | 24 February 2020</p>
+            </div>
+            <div class="blog-item">
+                <img src="image_2.webp" alt="Best wheel alignment & air conditioning">
+                <h5>Best wheel alignment & air conditioning</h5>
+                <p class="author"><img src="person_1.webp" alt="John Doe"> Posted by John Doe | 24 February 2020</p>
+            </div>
+            <div class="blog-item">
+                <img src="image_3.webp" alt="Best wheel alignment & air conditioning">
+                <h5>Best wheel alignment & air conditioning</h5>
+                <p class="author"><img src="person_1.webp" alt="John Doe"> Posted by John Doe | 24 February 2020</p>
+            </div>
+        </div>
+    </div>
+    <section class="pricing">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card p-4">
+                        <h3>First PMS</h3>
+                        <h2>$78.98</h2>
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card p-4">
+                        <h3>Engine</h3>
+                        <h2>$83.75</h2>
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-4">
+                        <h3>Tow Truck</h3>
+                        <h2>$85.00</h2>
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                       
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-4">
+                        <h3>Car Wash</h3>
+                        <h2>$30.50</h2>
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects" class="projects">
+        <div class="container-fluid projects-1">
+            <div class="row">
+                <div class="col-md-3 m-0 p-0">
+                    <img src="work-1.webp" class="project-image" alt="Responsive image">
+                </div>
+                <div class="col-md-3 m-0 p-0">
+                    <img src="work-2.webp" class="project-image" alt="Responsive image">
+                </div>
+                <div class="col-md-3 m-0 p-0">
+                    <img src="work-3.webp" class="project-image" alt="Responsive image">
+                </div> 
+                <div class="col-md-3 m-0 p-0">
+                    <img src="work-4.webp" class="project-image" alt="Responsive image">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Autorepair</h5>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+                <div class="col-md-2">
+                    <h5>Services</h5>
+                    <ol style="list-style-type: ">
+                        <li>Oil Change</li><br>
+                        <li>Batteries</li><br>
+                        <li>Tow Truck</li><br>
+                        <li>Tire Change</li><br>
+                        <li>Engine Repair</li>
+                    </ol>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact Information</h5>
+                    <div class="contact-info">
+                        <p>203 Fake St. Mountain View, San Francisco, California, USA</p>
+                        <p>+2 392 3929 210</p>
+                        <p><a href="mailto:info@yourdomain.com">info@yourdomain.com</a></p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5>Business Hours</h5>
+                    <p>Monday - Friday: 9am to 20pm</p>
+                    <p>Saturday: 9am to 17pm</p>
+                    <p>Vacations: All Sunday Days, All Official Holidays</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+</html>
